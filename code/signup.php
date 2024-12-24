@@ -19,10 +19,10 @@ session_start();
 $info = "";
 
 // connecting to database
-$server = 'localhost';
-$username = 'root';
-$password = '';
-$dbname  = 'RMS';
+$server = 'test213.mysql.database.azure.com';
+$username = 'fx';
+$password = 'Lanphamj21@@';
+$dbname  = 'fx';
 
 $conn = new mysqli($server, $username, $password, $dbname);
 if ($conn->connect_error) {
