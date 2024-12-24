@@ -1,11 +1,8 @@
 <?php
 // connecting to database
-$server = 'localhost';
-$username = 'root';
-$password = '';
-$dbname  = 'RMS';
-
-$conn = new mysqli($server, $username, $password, $dbname);
+$con = mysqli_init();
+mysqli_ssl_set($con,NULL,NULL, "{path to CA cert}", NULL, NULL);
+mysqli_real_connect($conn, "test213.mysql.database.azure.com", "fx", "{Lanphamj21@@}", "{fx}", 3306, MYSQLI_CLIENT_SSL);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
